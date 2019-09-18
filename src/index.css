@@ -1,13 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Rokkitt:700);
 body {
+  font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+  background-color:#092B40;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+#title{
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  margin: 100px auto 0px auto;
+}
+.wrapper{
+  display:flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+.fade-in {
+  font-size: 20px;
+  font-weight: bold;
+  animation-name: fadein;
+  animation-duration: 2s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input{
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  font-size: 25px;
+  display: inline-block;
+  width: 100px;
+  height: 25px;
+  padding:5px;
+  border: 5px solid orange;
+  position: relative;
+  outline:none;
+}
+
+input:focus{
+  width: 200px;
+}
+button {
+  display: inline-block;
+  background-color: #092B40;
+  width: 30px;
+  height: 30px;
+  margin: 5px 10px;
+  border: 5px solid orange;
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+  outline:none;
+}
+button::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -13px;
+  bottom: -7px;
+  background: orange;
+  width: 15px;
+  height: 5px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.resultBox{
+  background-color: #ffffff;
+  width:60%;
+  padding: 10px;
+  margin: 20px auto;
+  border-left: 10px solid #092B40;
+}
+
+.resultBox:hover {
+  border-left: 10px solid orange;
+}
+
+.resultBox h1{
+  width: 70%;
+  border-bottom: 2px solid orange;
+}
+a{
+  text-decoration: none;
+  color:#000000;
 }
